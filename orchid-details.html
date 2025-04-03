@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blooming Beauty - Elegant Flower Bouquet</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-container {
+            flex: 1;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+
+        .details-container {
+            flex: 2;
+            padding-left: 40px;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #6a1b9a; /* Purple */
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .price {
+            font-size: 36px;
+            font-weight: bold;
+            color: #9c27b0; /* Purple */
+            margin: 20px 0;
+        }
+
+        .price sup {
+            font-size: 18px;
+        }
+
+        .mrp {
+            text-decoration: line-through;
+            color: #888;
+            font-size: 18px;
+        }
+
+        .discount {
+            font-size: 18px;
+            color: #4caf50; /* Green for contrast */
+            font-weight: bold;
+        }
+
+        .stock {
+            color: #4caf50; /* Green */
+            font-weight: bold;
+        }
+
+        .options {
+            margin-top: 30px;
+        }
+
+        .options button {
+            padding: 12px 24px;
+            margin-right: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .options button:hover {
+            transform: translateY(-3px);
+        }
+
+        .add-to-cart {
+            background-color: #9c27b0; /* Purple */
+            color: #fff;
+        }
+
+        .buy-now {
+            background-color: #7b1fa2; /* Darker Purple */
+            color: #fff;
+        }
+
+        .wishlist {
+            background-color: #e1bee7; /* Light Purple */
+            color: #333;
+        }
+
+        .quantity {
+            margin-top: 20px;
+        }
+
+        .quantity select {
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .shipping-details {
+            margin-top: 20px;
+            background-color: #f3e5f5; /* Light Purple */
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .shipping-details h3 {
+            font-size: 20px;
+            color: #6a1b9a; /* Purple */
+            margin-bottom: 10px;
+        }
+
+        .shipping-details p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .shipping-details a {
+            color: #9c27b0; /* Purple */
+            text-decoration: none;
+        }
+
+        .shipping-details a:hover {
+            text-decoration: underline;
+        }
+
+        .offers {
+            margin-top: 20px;
+            background-color: #f3e5f5; /* Light Purple */
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .offers h3 {
+            font-size: 20px;
+            color: #6a1b9a; /* Purple */
+            margin-bottom: 10px;
+        }
+
+        .offers p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .offers a {
+            color: #9c27b0; /* Purple */
+            text-decoration: none;
+        }
+
+        .offers a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .details-container {
+                padding-left: 0;
+                margin-top: 20px;
+            }
+
+            .options button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <div class="image-container">
+            <img src="https://th.bing.com/th/id/OIP.5l_Xq_6cOxbVtYhE0PQx1AHaKW?rs=1&pid=ImgDetMain.jpg" alt="Elegant Flower Bouquet">
+        </div>
+        <div class="details-container">
+            <h1>Elegant Flower Bouquet</h1>
+            <p>Sophisticated Mix of Fresh Blooms - Perfect for Gifts, Weddings, and Special Occasions</p>
+            <p>Brand: Blooming Beauty</p>
+            <p class="discount">-53%</p>
+            <p class="price">₹1,299<sup>.00</sup></p>
+            <p class="mrp">M.R.P.: ₹2,749</p>
+            <p>Inclusive of all taxes.</p>
+            <p>EMI starts at ₹118 per month. <a href="#">EMI options</a></p>
+            
+            <div class="options">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-now">Buy Now</button>
+                <button class="wishlist">Add to Wish List</button>
+            </div>
+            
+            <div class="quantity">
+                Quantity: 
+                <select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            
+            <p class="stock">In stock</p>
+            <p>FREE delivery Today. Order within 3 hrs 48 mins. <a href="#">Details</a></p>
+            <p>Delivering to Mumbai 400017 - <a href="#">Update location</a></p>
+            <p>Payment: Secure transaction</p>
+            <p>Ships from: Blooming Beauty</p>
+            <p>Sold by: Blooming Beauty</p>
+            
+            <div class="shipping-details">
+                <h3>Shipping Details</h3>
+                <p>FREE delivery: <strong>Today</strong> if ordered within 3 hrs 48 mins.</p>
+                <p>Delivery to: <strong>Mumbai 400017</strong> - <a href="#">Change location</a></p>
+            </div>
+            
+            <div class="offers">
+                <h3>Save Extra with 3 offers</h3>
+                <p>Cashback: Get 5% back with Amazon Pay ICICI Bank credit card for Prime members. 3% back for others. Not applicable on EMI orders an... <a href="#">Details</a></p>
+                <p>Bank Offer (22): 10% Instant Discount up to INR 1000 on SBI Credit Card EMI Trxn. Minimum purchase value INR 5000 <a href="#">See All</a></p>
+                <p><a href="#">See 1 more</a></p>
+            </div>
+        </div>
+    </div>
+	<footer style="background-color: #6a1b9a; color: white; text-align: center; padding: 20px; margin-top: 40px; border-radius: 10px;">
+    <p style="margin: 0; font-size: 18px; font-weight: bold; color: white;">Thank you for purchasing! 🌸</p>
+</footer>
+
+</body>
+</html>
